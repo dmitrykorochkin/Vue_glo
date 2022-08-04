@@ -76,5 +76,10 @@ import CartComponents from "@/components/CartComponents.vue";
 
 export default {
   components: { NavBarComponents, CartComponents },
+  
 };
+
+
+
+
 </script>

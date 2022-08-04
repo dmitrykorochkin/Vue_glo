@@ -14,7 +14,11 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-4 offset-2">
-            <img class="shop__girl" src="@/assets/img/coffee_girl.jpg" alt="girl" />
+            <img
+              class="shop__girl"
+              src="@/assets/img/coffee_girl.jpg"
+              alt="girl"
+            />
           </div>
           <div class="col-lg-4">
             <div class="title">About our beans</div>
@@ -65,18 +69,17 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-                <cart-components />
-                <cart-components />
-                <cart-components />
-                <cart-components />
-                <cart-components />
-                <cart-components />
+              <cart-components />
+              <cart-components />
+              <cart-components />
+              <cart-components />
+              <cart-components />
+              <cart-components />
             </div>
           </div>
         </div>
       </div>
     </section>
-    
   </main>
 </template>
 
@@ -86,6 +89,54 @@ import NavBarComponents from "@/components/NavBarComponents.vue";
 import CartComponents from "@/components/CartComponents.vue";
 
 export default {
-    components: {NavBarComponents, CartComponents}
-}
+  components: { NavBarComponents, CartComponents },
+  data() {
+    return {
+      cart: [
+        {
+          id: 0,
+          img: "coffee-3.jpg",
+          title: "Solimo Coffee Beans 2kg",
+          text: "10.73$",
+          price: "",
+        },
+        {
+          id: 1,
+          img: "coffee-3.jpg",
+          title: "Solimo Coffee Beans 2kg",
+          text: "10.73$",
+          price: "",
+        },
+        {
+          id: 2,
+          img: "coffee-3.jpg",
+          title: "Solimo Coffee Beans 2kg",
+          text: "10.73$",
+          price: "",
+        },
+        {
+          id: 3,
+          img: "coffee-3.jpg",
+          title: "Solimo Coffee Beans 2kg",
+          text: "10.73$",
+          price: "",
+        },
+        {
+          id: 4,
+          img: "coffee-3.jpg",
+          title: "Solimo Coffee Beans 2kg",
+          text: "10.73$",
+          price: "",
+        },
+        {
+          id: 5,
+          img: "coffee-3.jpg",
+          title: "Solimo Coffee Beans 2kg",
+          text: "10.73$",
+          price: "",
+        },
+      ],
+    };
+  },
+};
 </script>
