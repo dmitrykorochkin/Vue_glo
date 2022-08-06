@@ -69,12 +69,42 @@
         <div class="row">
           <div class="col-lg-10 offset-lg-1">
             <div class="shop__wrapper">
-              <cart-components />
-              <cart-components />
-              <cart-components />
-              <cart-components />
-              <cart-components />
-              <cart-components />
+              <cart-components
+              classItem="shop__item"
+                :name="coffee[0].name"
+                :price="coffee[0].price"
+                :image="coffee[0].image"
+              />
+                <cart-components
+                classItem="shop__item"
+                :name="coffee[1].name"
+                :price="coffee[1].price"
+                :image="coffee[1].image"
+              />
+                <cart-components
+                classItem="shop__item"
+                :name="coffee[2].name"
+                :price="coffee[2].price"
+                :image="coffee[2].image"
+              />
+                <cart-components
+                classItem="shop__item"
+                :name="coffee[3].name"
+                :price="coffee[3].price"
+                :image="coffee[1].image"
+              />
+                <cart-components
+                classItem="shop__item"
+                :name="coffee[4].name"
+                :price="coffee[4].price"
+                :image="coffee[0].image"
+              />
+                <cart-components
+                classItem="shop__item"
+                :name="coffee[5].name"
+                :price="coffee[5].price"
+                :image="coffee[0].image"
+              />
             </div>
           </div>
         </div>
@@ -92,48 +122,42 @@ export default {
   components: { NavBarComponents, CartComponents },
   data() {
     return {
-      cart: [
+      coffee: [
         {
           id: 0,
-          img: "coffee-3.jpg",
-          title: "Solimo Coffee Beans 2kg",
-          text: "10.73$",
-          price: "",
+          name: "Solimo Coffee Beans 2kg",
+          price: 10.73,
+          image: "coffee-1.jpg"
         },
         {
           id: 1,
-          img: "coffee-3.jpg",
-          title: "Solimo Coffee Beans 2kg",
-          text: "10.73$",
-          price: "",
+          name: "Presto Coffee Beans 1kg",
+          price: 15.99,
+          image: "coffee-2.jpg"
         },
         {
           id: 2,
-          img: "coffee-3.jpg",
-          title: "Solimo Coffee Beans 2kg",
-          text: "10.73$",
-          price: "",
+          name: "AROMISTICO Coffee 1kg",
+          price: 6.99,
+          image: "coffee-3.jpg"
         },
         {
           id: 3,
-          img: "coffee-3.jpg",
-          title: "Solimo Coffee Beans 2kg",
-          text: "10.73$",
-          price: "",
+          name: "AROMISTICO Coffee 1kg",
+          price: 6.99,
+          image: "coffee-4.jpg"
         },
         {
           id: 4,
-          img: "coffee-3.jpg",
-          title: "Solimo Coffee Beans 2kg",
-          text: "10.73$",
-          price: "",
+          name: "AROMISTICO Coffee 1kg",
+          price: 6.99,
+          image: "coffee-5.jpg"
         },
         {
           id: 5,
-          img: "coffee-3.jpg",
-          title: "Solimo Coffee Beans 2kg",
-          text: "10.73$",
-          price: "",
+          name: "AROMISTICO Coffee 1kg",
+          price: 6.99,
+          image: "coffee-6.jpg"
         },
       ],
     };

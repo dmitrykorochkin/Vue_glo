@@ -53,20 +53,35 @@
         </div>
       </div>
     </section>
-       <section class="best">
-            <div class="container">
-                <div class="title">Our best</div>
-                <div class="row">
-                    <div class="col-lg-10 offset-lg-1">
-                        <div class="best__wrapper">
-                          <cart-components />
-                          <cart-components />
-                          <cart-components />
-                        </div>
-                    </div>
-                </div>
+    <section class="best">
+      <div class="container">
+        <div class="title">Our best</div>
+        <div class="row">
+          <div class="col-lg-10 offset-lg-1">
+            <div class="best__wrapper">
+              <cart-components
+                classItem="best__item"
+                :name="best[0].name"
+                :price="best[0].price"
+                :image="best[0].image"
+              />
+              <cart-components
+                classItem="best__item"
+                :name="best[1].name"
+                :price="best[1].price"
+                :image="best[1].image"
+              />
+              <cart-components
+                classItem="best__item"
+                :name="best[2].name"
+                :price="best[2].price"
+                :image="best[2].image"
+              />
             </div>
-        </section>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -76,10 +91,30 @@ import CartComponents from "@/components/CartComponents.vue";
 
 export default {
   components: { NavBarComponents, CartComponents },
-  
+  data() {
+    return {
+      best: [
+        {
+          id: 0,
+          name: "Solimo Coffee Beans 2kg",
+          price: 10.73,
+          image: "coffee-1.jpg"    
+         
+        },
+        {
+          id: 1,
+          name: "Presto Coffee Beans 1kg",
+          price: 15.99,
+          image: "coffee-2.jpg"
+        },
+        {
+          id: 2,
+          name: "AROMISTICO Coffee 1kg",
+          price: 6.99,
+          image: "coffee-3.jpg"
+        },
+      ],
+    };
+  },
 };
-
-
-
-
 </script>
