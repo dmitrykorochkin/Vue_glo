@@ -60,12 +60,14 @@
           <div class="col-lg-10 offset-lg-1">
             <div class="best__wrapper">
               <cart-components
+                v-for="card in best"
+                :key="card.id"
                 classItem="best__item"
-                :name="best[0].name"
-                :price="best[0].price"
-                :image="best[0].image"
+                :name="card.name"
+                :price="card.price"
+                :image="card.image"
               />
-              <cart-components
+              <!-- <cart-components
                 classItem="best__item"
                 :name="best[1].name"
                 :price="best[1].price"
@@ -76,7 +78,7 @@
                 :name="best[2].name"
                 :price="best[2].price"
                 :image="best[2].image"
-              />
+              /> -->
             </div>
           </div>
         </div>
@@ -98,20 +100,19 @@ export default {
           id: 0,
           name: "Solimo Coffee Beans 2kg",
           price: 10.73,
-          image: "coffee-1.jpg"    
-         
+          image: "coffee-1.jpg",
         },
         {
           id: 1,
           name: "Presto Coffee Beans 1kg",
           price: 15.99,
-          image: "coffee-2.jpg"
+          image: "coffee-2.jpg",
         },
         {
           id: 2,
           name: "AROMISTICO Coffee 1kg",
           price: 6.99,
-          image: "coffee-3.jpg"
+          image: "coffee-3.jpg",
         },
       ],
     };
